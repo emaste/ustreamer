@@ -5,8 +5,8 @@ DESTDIR ?=
 PREFIX ?= /usr/local
 
 CC ?= gcc
-CFLAGS ?= -O3
-LDFLAGS ?=
+CFLAGS ?= -O3 -I/usr/local/include
+LDFLAGS ?= -L/usr/local/lib
 
 RPI_VC_HEADERS ?= /opt/vc/include
 RPI_VC_LIBS ?= /opt/vc/lib
