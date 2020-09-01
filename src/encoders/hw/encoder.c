@@ -52,7 +52,7 @@ int hw_encoder_prepare(struct device_t *dev, unsigned quality) {
 	MEMSET_ZERO(comp);
 
 	if (xioctl(dev->run->fd, VIDIOC_G_JPEGCOMP, &comp) < 0) {
-		LOG_ERROR("Device does not support setting of HW encoding quality parameters");
+		LOG_INFO("Device does not support setting of HW encoding quality parameters");
 		return -1;
 	}
 	comp.quality = quality;
